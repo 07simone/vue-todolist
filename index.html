@@ -34,10 +34,10 @@
                     
                 </div>
                 <div class="col-12">
-                    <div class="list" @keyup.delete="rimuoviElemento(contenuto)">
+                    <div class="list">
                         <!-- v if se è maggiore uguale di uno, ovvero se è presente qualcosa all'inteno della lista -->
-                        <ul class="list-group" v-if="commissionList.length >= 1" >   
-                            <li v-for="(elemento, index) in commissionList " class="list-group-item d-flex justify-content-between"  >
+                        <ul class="list-group" v-if="commissionList.length >= 1">    
+                            <li v-for="(elemento, index) in commissionList" :class="sbarramento" class="list-group-item d-flex justify-content-between"  >
                                 {{elemento.text}}
                                 <button @click="rimuoviElemento(index)" class="btn btn-danger rounded-3"><i class="fa-solid fa-trash-can"></i></button>
                             </li>

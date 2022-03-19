@@ -1,22 +1,28 @@
 const app = new Vue({
     el: "#app",
     data:{
-       /*  commissionMade : "", */
+        sbarramento:"text-decoration-line-through",
         commissionList : [
+
             {
                 text: "comprare il pane",
+                done: true,
             },
             {
                 text: "comprare il latte",
+                done: true,
             },
             {
                 text: "comprare l'acqua",
+                done: false,
             },
             {
                 text: "comprare la pasta",
+                done: true,
             },
             {
                 text: "comprare lo yogurt",
+                done: true,
             },
             
         ],
@@ -40,4 +46,4 @@ const app = new Vue({
 })
 
 
-// se la commissione è stata fatta allora rimuovimi la commissione dalla lista altrimenti aggiungimela alla lista
+// all'interno della lista deve essere presente un click che mi faccia apparire la classe sbarrata al singolo index
