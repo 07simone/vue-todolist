@@ -41,6 +41,12 @@ const app = new Vue({
         rimuoviElemento(indice){
             
             this.commissionList.splice(indice, 1)
+        },
+
+        toggleDone(todoIndex){
+            if (this.commissionList[todoIndex] != undefined){
+                this.commissionList[todoIndex].done = !this.commissionList[todoIndex].done;
+            } 
         }
     }
 })
