@@ -31,10 +31,13 @@ const app = new Vue({
     },
     // 2 funzioni una che li aggiunge e una che li rimuova
     methods:{
-        aggiungiElemento(content){
-        
-            this.commissionList.push(content)
-// con questa riga di codice li vado a dire una volta che ho riempito il contenuto, svuotami la barra in alto
+        aggiungiElemento(content,TodoDone){
+
+                const newElement = {                    // mi creo una nuova variabile, all'interno del quali li vado a pushare nuovi elementi creati
+                text : content,                             
+                done : TodoDone
+            } 
+            this.commissionList.push(newElement)                                                    // con questa riga di codice li vado a dire una volta che ho riempito il contenuto, svuotami la barra in alto
             this.contenuto= "";  
             
         },
