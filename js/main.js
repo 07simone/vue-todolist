@@ -32,15 +32,17 @@ const app = new Vue({
     // 2 funzioni una che li aggiunge e una che li rimuova
     methods:{
         aggiungiElemento(content,TodoDone){
-
                 const newElement = {                    // mi creo una nuova variabile, all'interno del quali li vado a pushare nuovi elementi creati
                 text : content,                             
                 done : TodoDone
             } 
+            if(this.contenuto == "") {
+                alert("non hai inserito nulla")
+                return
+            }
             this.commissionList.push(newElement)                                                    // con questa riga di codice li vado a dire una volta che ho riempito il contenuto, svuotami la barra in alto
-            this.contenuto= "";  
-            
         },
+        
         rimuoviElemento(indice){
             
             this.commissionList.splice(indice, 1)
